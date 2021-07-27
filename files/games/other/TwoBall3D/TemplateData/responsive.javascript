@@ -4,7 +4,7 @@
 
     const gameContainer = q('#gameContainer');
 
-    const initialDimensions = {width: parseInt(gameContainer.style.width, 10), height: parseInt(gameContainer.style.height, 10)};
+    const initialDimensions = {width: parseInt(gameContainer.style.width), height: parseInt(gameContainer.style.height)};
     gameContainer.style.width = '100%';
     gameContainer.style.height = '100%';
 
@@ -24,15 +24,14 @@
     const setDimensions = () => {
         gameContainer.style.position = 'absolute';
         gCanvasElement.style.display = 'none';
-        var winW = parseInt(window.getComputedStyle(gameContainer).width, 10);
-        var winH = parseInt(window.getComputedStyle(gameContainer).height, 10);
-        var scale = Math.min(winW / initialDimensions.width, winH / initialDimensions.height);
+        var winW = parseInt(window.getComputedStyle(gameContainer).width);
+        var winH = parseInt(window.getComputedStyle(gameContainer).height);
         gCanvasElement.style.display = '';
         gCanvasElement.style.width = 'auto';
         gCanvasElement.style.height = 'auto';
 
-        var fitW = Math.round(initialDimensions.width * scale * 100) / 100;
-        var fitH = Math.round(initialDimensions.height * scale * 100) / 100;
+        var fitW = Math.round(initialDimensions.width * 100) / 100;
+        var fitH = Math.round(initialDimensions.height * 100) / 100;
 
         gCanvasElement.setAttribute('width', fitW);
         gCanvasElement.setAttribute('height', fitH);
