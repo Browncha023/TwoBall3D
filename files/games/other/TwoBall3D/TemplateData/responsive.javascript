@@ -24,8 +24,8 @@
     const setDimensions = () => {
         gameContainer.style.position = 'absolute';
         gCanvasElement.style.display = 'none';
-        var winW = parseInt(window.getComputedStyle(gameContainer).width);
-        var winH = parseInt(window.getComputedStyle(gameContainer).height);
+        var winW = parseInt(window.getComputedStyle(gameContainer).width * 10);
+        var winH = parseInt(window.getComputedStyle(gameContainer).height * 10);
         gCanvasElement.style.display = '';
         gCanvasElement.style.width = 'auto';
         gCanvasElement.style.height = 'auto';
