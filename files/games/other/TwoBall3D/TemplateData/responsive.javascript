@@ -33,8 +33,8 @@
         var fitW = Math.round(initialDimensions.width);
         var fitH = Math.round(initialDimensions.height);
 
-        gCanvasElement.setAttribute('width', fitW);
-        gCanvasElement.setAttribute('height', fitH);
+        gCanvasElement.setAttribute('width', winW);
+        gCanvasElement.setAttribute('height', winH);
     }
 
     window.setDimensions = setDimensions;
